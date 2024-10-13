@@ -1,0 +1,26 @@
+# MEAN | MEDIAN | MODE 
+
+Defination: Central Tendency refers to the measures used to determine the "CENTRE" of the distribution of data
+
+## MEAN - AVERAGE
+	N - Population Data  
+	Population Mean -  summition of xi/N , i belong to [1,N]
+
+	n - Sample Data
+	Sample Mean - summition of xi/n  , i belong to [1,n]
+
+
+## MEDIAN - The median is the middle number in a sorted list of numbers and can be more descriptive of that data set than the average. 
+		  - The median is sometimes used rather than the mean when there are outliers in the sequence that might skew the average of the values.
+		
+	Even - take two middle/2
+	Odd - take middle/2
+
+## MODE - The most common number that appears in your set of data.
+*****************
+
+USE CASE:
+1. Outliers - Median
+2. Categorical Data - MODE
+
+ 

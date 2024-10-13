@@ -1,0 +1,36 @@
+# CONFUSION MATRIX
+
+					Predictions
+		  ___1___________________0__________
+	   1 | True Positive	False Negative |
+Actual   |								   |
+	   0 | False Positive	True Negative  |
+	 	 |_________________________________|	
+		 
+		 
+	Type 1 Errors:
+		k/n's "False Positive"
+		
+	Type 2 Errors
+		k/n's "False Negative"
+	
+
+
+# ACCURACY | Precision | Recall | F1 Score 
+
+	1. ACCURACY - 
+		a. (TP+TN)/Total
+		b. Misleading - When dataset is imbalance in nature 
+
+	2. Precision
+		a. Ask this question while handing the Precision value -  What proportion of predicted Positive is truely Positive? 
+		b. (TP)/(TP + FP)
+
+	3. Recall 
+		a. Ask this question while handing the Recall value - What proportion of actual Positives is correctly classified?
+		b. (TP)/(TP+FN)
+
+	4. F1 Score 
+		a. When we don't know which type is dangerous to the model then use F1 Score.
+		b. F1 Score = (2 * Precision * Recall)/(Precision + Recall)
+

@@ -1,0 +1,30 @@
+VARIANCE | STANDARD DEVIATION
+
+# VARIANCE
+	N - Population Data
+	Population Mean,u - summition of xi/N
+	Population Variance - summition of (xi-u)^2/N
+	
+	n - Sample Data
+	Sample Mean,s - summition of xi/n
+	Sample Variance, s^2 - summition of (xi-s)^2/(n-1)  , n-1 = Bassels Correction or Degree of freedom
+	- Spreed of Data
+	
+# STANDARD DEVIATION
+s.d = sqrt(Variance)
+***************************
+
+USE CASE:
+Take reference from FIG1-
+1. Take Sample mean = 2.83
+2. Take Sample Standard Variance = 1.472
+Then, 
+a. 2.83+1.472=4.302 
+   - Data will lie in range from 2.83 to 4.302 , who are in this range
+   
+b. 4.302+1.472=5.774
+   - Data will lie in range from 4.302 to 5.774 , who are in this range
+   
+c. so on.....
+
+d. Same goes for in opposite side...2.83-1.472=1.358

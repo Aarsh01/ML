@@ -1,0 +1,34 @@
+When we have to do multiple encoding on same dataset, then we use "Column Transformer". 
+
+AGE | CITY | GENDER | REVIEW 
+
+, here city, gender - OHE
+       review       - OE
+	   age          - SI
+
+
+\\ Column Transformer | How to use "ColumnTransformer" in Sklearn
+
+from Sklearn.compose import ColumnTransformer
+
+
+transformers = [
+	(name_signed,type_of_encoding, on_which_cols_have_to_apply)
+]
+
+
+transformer_col = ColumnTransformer(
+		// transformers are pass in turples 
+		transformers = [
+			('tnf1',SimpleImputer(),['fever']),
+    		('tnf2',OrdinalEncoder(categories=[['Mild','Strong']]),['cough']),
+    		('tnf3',OneHotEncoder(sparse=False,drop='first'),['gender','city'])
+		],
+		remainder = 'passthrough' // no changes in that col  OR
+			    'drop' // drop that col
+	)
+
+transformer_col.fit_transform(X_train)
+
+transformer_col.transform(X_test)
+

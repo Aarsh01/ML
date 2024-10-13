@@ -1,0 +1,19 @@
+Ordinal Data - When we can order the category in seq. like PG>UG>HS(high School)
+
+1. Label Encoding - Used to encode the TARGET col, when nature is categorical 
+2. Ordinal Encoding - Used to encode the INPUT col, when DATA IS ORDINAL IN NATURE
+
+
+
+Nominal Data - When we can't order the category in seq. like (Male, Female)/ colors(Yellow, Red, Green)
+
+
+3. OHE(One-Hot-Encoding) - Used when data is NOMINAL in nature
+
+OHE - convert the categories into diff n cols 
+
+Dummy Variable - delete any one col (n-1 se proceed kargye) because of the MULTICOLLINERITY concept
+
+OHE with frequent variables - Use the col OTHER for those who are less in number and do the same OHE on remaining categories who are in large number as compared to the OTHER category. 
+
+

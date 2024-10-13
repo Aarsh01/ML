@@ -1,0 +1,52 @@
+Function Transformer / Mathimatical Transformer
+ These are some functions tht help the data to transform into normal distribution 
+ 1. Log Transform 
+ 2. Reciprocal Transform 
+ 3. Square Root Transform
+ 4. Custom
+ 
+ 4. Box-Cox
+ 5. Yeo - Johnson Transform
+ 
+ 
+In sklearn documantation ,
+3 types of transformers:
+	a. Function Transformer - {1,2,3,4}
+	b. Power Transformer - {4,5}
+	c. Quantile Transformer - No discuss in this folder
+	
+	
+How to find if data is normal?
+1. sns.displot()
+2. pd.skew() = 0
+3. QQ plot 
+	
+
+## Log Transform
+where to use - no negative values, right skewed data
+
+## Reciprocal Transform 
+ 1/x 
+
+## Square Root Transform
+ sqrt()
+ 
+ 
+ 
+
+## CODE
+trf = FunctionTransformer(func=np.log1p)
+X_train_transformed = trf.fit_transform(X_train)
+X_test_transformed = trf.transform(X_test)
+
+clf = LogisticRegression()
+clf2 = DecisionTreeClassifier()
+
+clf.fit(X_train_transformed,y_train)
+clf2.fit(X_train_transformed,y_train)
+    
+y_pred = clf.predict(X_test_transformed)
+y_pred1 = clf2.predict(X_test_transformed)
+    
+print("Accuracy LR",accuracy_score(y_test,y_pred))
+print("Accuracy DT",accuracy_score(y_test,y_pred1))

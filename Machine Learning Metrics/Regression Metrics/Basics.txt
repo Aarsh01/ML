@@ -1,0 +1,72 @@
+# MSE | MAE | RMSE | R2 SCORE | ADJUSTED R2 SCORE
+
+1. MSE
+	a. In statistics, the mean squared error (MSE) is a risk function that measures the square of errors. 
+	b. When performing regression, use MSE if you believe your target is normally distributed and you want large errors to be penalized more than small ones.
+	c. Lesser the MSE => Smaller is the error => Better the estimator.
+
+	d. The Mean Squared Error is calculated as:
+
+		MSE = (1/n) * Σ(actual – forecast)2
+
+		where:
+			Σ – a symbol that means “sum”
+			n – sample size
+			actual – the actual data value
+			forecast – the predicted data value
+
+
+2. MAE
+	a. Mean Absolute Error (MAE) is a measure of the average size of the mistakes in a collection of predictions, without taking their direction into account. 
+	b. It is measured as the average absolute difference between the predicted values and the actual values and is used to assess the effectiveness of a regression model.
+
+	c. The MAE loss function formula:
+
+		MAE = (1/n) Σ(i=1 to n) |y_i – ŷ_i|
+	
+		where:
+
+			n is the number of observations in the dataset.
+			y_i is the true value.
+			ŷ_i is the predicted value.
+
+
+3. RMSE
+	a. It measures the average difference between values predicted by a model and the actual values. 
+	b. It provides an estimation of how well the model is able to predict the target value (accuracy).
+	c. The lower the value of the Root Mean Squared Error, the better the model is. 
+	d. A perfect model (a hypothetic model that would always predict the exact expected value) would have a Root Mean Squared Error value of 0.
+	e. The Root Mean Squared Error can be interpreted as the standard deviation of the error (it's the square root of the error variance).
+
+4. R2 SCORE
+	a. How much regression line mean line se kitna better hai. 
+	b. Also knowns as "Coefficient of determination" also "Goodness of Fit".
+	
+	c. The R2 SCORE function formula:
+	
+		R2 = 1 - (SSr/SSm)
+		
+		where:
+			SSr = Summ of Squared Error in regression line
+			SSm = Summ of Squared Error in Mean Line
+			
+	d. R2 score moves to 1 then model performance moves towards perfection and moves to 0 then model performance start acting bad
+	e. R-Squared (R² or the coefficient of determination) is a statistical measure in a regression model that determines the proportion of variance in the dependent variable that can be explained by the independent variable.
+	
+5. ADJUSTED R2 SCORE
+	a. Adjusted R2 is a corrected goodness-of-fit (model accuracy) measure for linear models. 
+	b. It identifies the percentage of variance in the target field that is explained by the input or inputs.
+	c. R2 tends to optimistically estimate the fit of the linear regression. 
+	d. It always increases as the number of effects are included in the model. 
+	e. Adjusted R2 attempts to correct for this overestimation. 
+	f. Adjusted R2 might decrease if a specific effect does not improve the model.
+	
+	g. The ADJUSTED R2 SCORE function formula:
+		
+		1-[((1-R2)(n-1))/(n-1-k)]
+		
+		where:
+			
+			n - No. of rows
+			k - Independant variables, {k=1,2,3....}
+		

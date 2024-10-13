@@ -1,0 +1,43 @@
+Principal component analysis (PCA) reduces the number of dimensions in large datasets to principal components that retain most of the original information. It does this by transforming potentially correlated variables into a smaller set of variables, called principal components.
+
+# PCA VS LDA VS FACTOR ANALYSIS
+1. PCA is a dimension reduction technique like linear discriminant analysis (LDA). 
+2. In contrast to LDA, PCA is not limited to supervised learning tasks. 
+3. For unsupervised learning tasks, this means PCA can reduce dimensions without having to consider class labels or categories. 
+4. They both reduce the number of dimensions or variables in a dataset while minimizing information loss. 
+5. PCA breaks down variables into a subset of linearly independent principal components. 
+
+
+# PCA VS K-MEANS CLUSTERING
+1.1. PCA is used to reduce the dimensionality of the data, while k-means clustering groups data points together based on similarity. 
+1.2. PCA creates new variables, such as principal components, that are linear combinations of the original variables. 
+1.3. PCA takes a dataset with multiple variables as input, and it produces a dataset into a lower subspace, that is, a reduced dataset with fewer variables. 
+1.4. It is often used in exploratory data analysis for building predictive models, but it is also used in data preprocessing for dimensionality reduction.
+2.1. K-means is a clustering algorithm that assigns data points to clusters based on their distance from the cluster centers. 
+2.2. It takes a dataset with one or more variables as input, and it produces a set of clusters with similar data points. 
+2.3. It is often used to cluster data for a variety of use cases, such as image segmentation, customer segmentation, and anomaly detection.
+
+
+# COMPUTE THE COVARIANCE MATRIX TO IDENTIFY CORRELATIONS
+1. Covariance (cov) measures how strongly correlated two or more variables are. 
+2. The covariance matrix summarizes the covariances associated with all pair combinations of the initial variables in the dataset. 
+3. Computing the covariance matrix helps identify the relationships between the variables–that is, how the variables vary from the mean with respect to each other. 
+4. This data matrix is a symmetric matrix, meaning the variable combinations can be represented as d × d, where d is the number of dimensions
+
+# THE SIGN OF THE VARIABLES IN THE MATRIX TELLS US WHETHER COMBINATIONS ARE CORRELATED:
+1. Positive (the variables are correlated and increase or decrease at the same time)
+2. Negative (the variables are not correlated, meaning that one decreases while the other increases)
+3. Zero (the variables are not related to each other)
+
+
+# COMPUTE THE EIGENVECTORS AND EIGENVALUES OF THE COVARIANCE MATRIX
+1. We calculate the eigenvectors (principal components) and eigenvalues of the covariance matrix. 
+2. As eigenvectors, the principal components represent the directions of maximum variance in the data. 
+3. The eigenvalues represent the amount of variance in each component. 
+4. Ranking the eigenvectors by eigenvalue identifies the order of principal components.
+
+
+
+Benifits:
+1. Reduce higher dimension into lower "Best" dimension
+2. Visualization {10D into 3D, then viz is possible}
