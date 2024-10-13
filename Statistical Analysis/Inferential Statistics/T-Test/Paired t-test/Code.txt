@@ -1,0 +1,35 @@
+PAIRED T-TEST
+Let’s perform a paired t-test to verify if the change is statistically significant.
+
+
+# Sample Sizes
+N = 25
+
+# Degrees of freedom  
+dof = N - 1
+
+# Gaussian distributed data with mean = 10.5 and var = 1  
+x = np.random.randn(N) + 10.5
+
+# Gaussian distributed data with mean = 9.9 and var = 1  
+y = np.random.randn(N) + 9.9
+
+t_stat, p_val = stats.ttest_rel(x,y)
+print("t-statistic = " + str(t_stat))  
+print("p-value = " + str(p_val))
+
+CODE EXPLAINATION
+This code is written in Python and uses the NumPy and SciPy libraries.
+The first line sets the sample size to 25.
+The second line calculates the degrees of freedom, which is the sample size minus one.
+The next two lines generate two sets of data, x and y, that are normally distributed with means of 10.5 and 9.9, respectively, and a variance of 1. The np.random.randn() function generates random numbers from a standard normal distribution, and the + operator shifts the mean to the desired value.
+The stats.ttest_rel() function from the SciPy library performs a paired t-test on the two sets of data. The t-test is used to determine if there is a significant difference between the means of two groups. The function returns the t-statistic and the p-value.
+The last two lines print the t-statistic and p-value to the console.
+
+
+OUTPUT:
+t-statistic = 3.446152658909739
+p-value = 0.0021043953630465787
+
+INTERPRETATION OF THE TEST RESULTS
+The low p-value indicates that the null hypothesis is rejected, i.e., there is no change in the diameter of the ball bearings after introducing the new casting machine. 

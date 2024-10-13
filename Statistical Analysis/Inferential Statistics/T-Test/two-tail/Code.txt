@@ -1,0 +1,33 @@
+TWO-SAMPLE T-TEST 
+Let’s consider that the first factory shares 21 samples of ball bearings where the mean diameter of the sample comes out to be 10.5 cm. On the other hand, the second factory shares 25 samples with a mean diameter of 9.5 cm. Both have a standard deviation of 1 cm. 
+
+
+# Sample Sizes
+N1, N2 = 21, 25
+
+# Degrees of freedom  
+dof = min(N1,N2) - 1
+
+# Gaussian distributed data with mean = 10.5 and var = 1  
+x = np.random.randn(N1) + 10.5
+
+# Gaussian distributed data with mean = 9.5 and var = 1  
+y = np.random.randn(N2) + 9.5
+
+## Using the internal function from SciPy Package  
+t_stat, p_val = stats.ttest_ind(x, y)  
+print("t-statistic = " + str(t_stat))  
+print("p-value = " + str(p_val))
+
+CODE EXPLAINATION
+1. This code snippet is written in Python and uses the NumPy and SciPy packages to perform a two-sample t-test.
+2. First, the sample sizes are defined as N1=21 and N2=25. Then, the degrees of freedom are calculated as the minimum of N1 and N2 minus 1.
+3. Next, two sets of data are generated using NumPy's random.randn() function. The first set, x, is a Gaussian distribution with a mean of 10.5 and a variance of 1. The second set, y, is a Gaussian distribution with a mean of 9.5 and a variance of 1.
+4. Finally, the ttest_ind() function from the SciPy package is used to perform a two-sample t-test on the two sets of data. The t-statistic and p-value are then printed to the console. The t-statistic measures the difference between the means of the two sets of data, while the p-value indicates the probability of obtaining such a difference by chance.
+
+OUTPUT:
+t-statistic = 3.18913308431476
+p-value = 0.0026296199823557754
+
+INTERPRETATION OF THE TEST RESULTS
+Referring to the p-value of 0.0026 which is less than the significance level of 0.05, we reject the null hypothesis stating that the bearings from the two factories are not identical.

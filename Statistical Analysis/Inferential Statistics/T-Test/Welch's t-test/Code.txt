@@ -1,0 +1,34 @@
+WELCH’S T-TEST
+The mean diameter of bearings from the first factory turns out to be 9.9 cm with a standard deviation of 1 cm, whereas the mean diameter from the second factory turns out to be 10 cm with a standard deviation of 3 cm.  As the standard deviation of the two samples is different, we will use Welch’s t-test.
+
+
+# Sample Sizes
+N1, N2 = 21, 25
+
+# Degrees of freedom  
+dof = min(N1,N2) - 1
+
+# Gaussian distributed data with mean = 9.9 and var = 1  
+x = np.random.randn(N1) + 9.9
+
+# Gaussian distributed data with mean = 10 and var = 3
+y = 3*np.random.randn(N2) + 10
+
+## Using SciPy Package  
+t_stat, p_val = stats.ttest_ind(x, y, equal_var = False) 
+print("t-statistic = " + str(t_stat))  
+print("p-value = " + str(p_val))
+
+CODE EXPLAINATION
+1. This code is written in Python and it performs a two-sample t-test using the SciPy package.
+2. First, the sample sizes are defined as N1=21 and N2=25. Then, the degrees of freedom are calculated as the minimum of N1 and N2 minus 1.
+3. Next, two sets of data are generated using NumPy's random number generator. The first set, x, is a Gaussian distribution with a mean of 9.9 and a variance of 1. The second set, y, is also a Gaussian distribution but with a mean of 10 and a variance of 3.
+4. Finally, the t-test is performed using the stats.ttest_ind() function from the SciPy package. The equal_var parameter is set to False because the variances of the two samples are not assumed to be equal. The function returns the t-statistic and the p-value, which are then printed to the console.
+
+
+OUTPUT:
+t-statistic = 1.3828843424092643
+p-value = 0.17753505304053804
+
+INTERPRETATION OF THE TEST RESULTS
+The observed p-value is greater than the significance level of 0.05 which indicates that we fail to reject the null hypothesis implying that the bearings from the two factories are identical. We can not be sure of the results due to the high standard deviation of the samples from the second factory; hence we will need to collect more samples to perform the z-test. 

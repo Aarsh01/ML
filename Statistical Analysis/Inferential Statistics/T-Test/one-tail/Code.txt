@@ -1,0 +1,40 @@
+# ONE-SAMPLE T-TEST
+Let us learn how to conduct a one-sample t-test in Python using the 
+"scipy.stats.ttest_1samp()" function. 
+
+
+import numpy as np  
+from scipy import stats  
+
+# Population Mean 
+mu = 10
+
+# Sample Size
+N1 = 21
+
+# Degrees of freedom  
+dof = N1 - 1
+
+# Generate a random sample with mean = 11 and standard deviation = 1
+x = np.random.randn(N1) + 11
+
+# Using the Stats library, compute t-statistic and p-value
+t_stat, p_val = stats.ttest_1samp(a=x, popmean = mu)
+print("t-statistic = " + str(t_stat))  
+print("p-value = " + str(p_val)) 
+
+
+Code Explanation:
+1. This code imports the necessary libraries, numpy and scipy.stats. It then sets the population mean to 10 and the sample size to 21. The degrees of freedom are calculated as the sample size minus one.
+2. Next, a random sample of size 21 is generated using numpy's random.randn function, with a mean of 11 and standard deviation of 1.
+3. Finally, the t-statistic and p-value are calculated using the stats.ttest_1samp function from the scipy.stats library. The t-statistic measures the difference between the sample mean and the population mean in units of the standard error, while the p-value represents the probability of obtaining a t-statistic as extreme or more extreme than the observed value, assuming the null hypothesis (that the population mean is equal to the sample mean) is true.
+4. The results are printed to the console using the print function.
+
+OUTPUT:
+t-statistic = 4.689539773390642
+p-value = 0.0001407967502139183
+
+
+INTERPRETATION OF THE TEST RESULTS
+The value of t-statistic comes out to be 4.69 which seems to be very far from the mean of zero in a t-distribution. To quantify such extreme value, we refer to a p-value (which is introduced in the terminology section). The p-value is less than the default significance level of 0.05, which indicates that the probability of such an extreme outcome is close to zero and that the null hypothesis can be rejected.
+Note that the significance level is set at the beginning of the experiment.
